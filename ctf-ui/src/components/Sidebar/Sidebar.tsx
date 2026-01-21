@@ -196,7 +196,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed: controlledCollapsed, onCol
       {/* Logo Section */}
       <div className={styles.logoSection}>
         <img
-          src="/resources/images/product_logo.png"
+          src={`${import.meta.env.BASE_URL}resources/images/product_logo.png`}
           alt="CTF Logo"
           className={styles.logoImage}
         />
