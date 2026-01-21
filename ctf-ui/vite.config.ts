@@ -7,7 +7,7 @@ const repoName = process.env.VITE_REPO_NAME || '';
 const base = repoName ? `/${repoName}/` : '/';
 
 export default defineConfig({
-  base: base,
+  base: "/CTF_Demo_Repo/",
   plugins: [react()],
   css: {
     preprocessorOptions: {
