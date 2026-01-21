@@ -1,0 +1,414 @@
+// Dashboard V2 Styles - dbt Cloud inspired, clean design
+@use '../shared/variables' as *;
+@use 'sass:color';
+
+$bg-secondary: #f9fafb;
+
+// Page Header - Using Bootstrap classes and Ant Design Flex
+.titleDescription {
+  font-size: $font-size-body-small;
+  color: $text-secondary;
+  margin: 0;
+}
+.createJobBtn {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-body-small;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: $accent-color;
+  border: none;
+
+  &:hover {
+    background: color.adjust($accent-color, $lightness: -8%);
+  }
+}
+
+// Project Card - Dark theme
+.projectCard {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-radius: 10px;
+  padding: 24px 18px;
+  color: #ffffff;
+}
+
+// Project Card - Using Ant Design Flex for layout
+.projectIcon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-h3;
+  color: $accent-color;
+}
+
+.projectLabel {
+  font-size: $font-size-caption;
+  font-weight: $font-weight-medium;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  line-height: $line-height-tight;
+}
+
+.projectName {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-bold;
+  color: #ffffff;
+  margin: 2px 0;
+}
+
+.icon {
+  color: $accent-color;
+}
+.metaInfo {
+  font-size: $font-size-caption;
+  font-weight: $font-weight-medium;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2px;
+}
+.metricLabel {
+  font-size: $font-size-caption;
+  font-weight: $font-weight-medium;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.metricValue {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-bold;
+  color: #ffffff;
+
+  &.success {
+    color: $accent-color;
+  }
+
+  &.danger {
+    color: #f87171;
+  }
+}
+
+.metricSubtext {
+  font-size: $font-size-caption;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 1px;
+}
+
+.projectLastRun {
+  text-align: right;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+  .lastRunLabel {
+    font-size: $font-size-caption;
+    font-weight: $font-weight-medium;
+    letter-spacing: 0.3px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .lastRunTime {
+    font-size: $font-size-body;
+    font-weight: $font-weight-semibold;
+    color: #ffffff;
+  }
+
+  .nextRunTime {
+    font-size: $font-size-caption;
+    color: $accent-color;
+    margin-top: 2px;
+  }
+}
+
+// Stats Grid - Using Bootstrap grid classes
+
+.statCard {
+  background: $bg-primary;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid $border-color;
+  transition: all 0.15s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  &.compact {
+    padding: 14px;
+  }
+
+  &.minimal {
+    padding: 12px;
+    border-radius: 6px;
+  }
+}
+
+// Stat Card Header - Using Ant Design Flex
+
+.statIconWrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-h3;
+  color: #ffffff;
+
+  &.compact {
+    width: 34px;
+    height: 34px;
+    font-size: $font-size-body-large;
+  }
+
+  &.minimal {
+    width: 30px;
+    height: 30px;
+    font-size: $font-size-body;
+    border-radius: 6px;
+  }
+
+  &.success {
+    background: $accent-color;
+  }
+
+  &.info {
+    background: $accent-secondary;
+  }
+
+  &.warning {
+    background: #f59e0b;
+  }
+
+  &.purple {
+    background: #8b5cf6;
+  }
+}
+
+.statTrend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: $font-size-caption;
+  font-weight: $font-weight-semibold;
+  padding: 3px 6px;
+  border-radius: 4px;
+  line-height: $line-height-tight;
+
+  &.up {
+    color: $accent-color;
+    background: rgba(16, 185, 129, 0.1);
+  }
+
+  &.down {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+  }
+
+  &.neutral {
+    color: $text-secondary;
+    background: rgba(107, 114, 128, 0.1);
+  }
+}
+
+.statLabel {
+  font-size: $font-size-caption;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.3px;
+  color: $text-secondary;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  line-height: $line-height-tight;
+
+  &.minimal {
+    font-size: $font-size-caption;
+  }
+}
+
+.statValue {
+  font-size: $font-size-h1;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  line-height: $line-height-tight;
+
+  &.compact {
+    font-size: $font-size-h1;
+  }
+
+  &.minimal {
+    font-size: $font-size-h2;
+  }
+}
+
+.statSubtext {
+  font-size: $font-size-small;
+  color: $text-muted;
+  margin-top: 2px;
+  line-height: $line-height-normal;
+
+  &.minimal {
+    font-size: $font-size-caption;
+  }
+}
+
+// Charts Grid - Using Bootstrap grid classes
+
+.chartCard {
+  background: $bg-primary;
+  border-radius: 8px;
+  border: 1px solid $border-color;
+  overflow: hidden;
+}
+
+.chartCardHeader {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.chartTitle {
+  font-size: $font-size-body;
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: $line-height-normal;
+
+  .chartIcon {
+    color: $text-secondary;
+    font-size: $font-size-body-small;
+  }
+}
+
+// Chart Actions - Using Ant Design Flex
+
+.chartBody {
+  padding: 16px;
+}
+
+// Bottom Grid - Using Bootstrap grid classes
+
+// Recent Executions List - Using Ant Design Flex
+.executionsList {
+  .executionItem {
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f4f6;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: $bg-secondary;
+      margin: 0 -16px;
+      padding: 10px 16px;
+    }
+  }
+
+  .executionId {
+    font-size: $font-size-caption;
+    font-weight: $font-weight-semibold;
+    color: $accent-secondary;
+    font-family: 'Monaco', 'Consolas', monospace;
+    background: rgba(59, 130, 246, 0.08);
+    padding: 3px 6px;
+    border-radius: 4px;
+    min-width: 56px;
+    line-height: $line-height-tight;
+  }
+
+  .executionModel {
+    font-size: $font-size-body-small;
+    color: $text-primary;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-normal;
+  }
+
+  .executionStatus {
+    font-size: $font-size-caption;
+    font-weight: $font-weight-semibold;
+    padding: 3px 8px;
+    border-radius: 10px;
+    line-height: $line-height-tight;
+
+    &.passed {
+      background: rgba(16, 185, 129, 0.1);
+      color: $accent-color;
+    }
+
+    &.failed {
+      background: rgba(239, 68, 68, 0.1);
+      color: #ef4444;
+    }
+
+    &.running {
+      background: rgba(59, 130, 246, 0.1);
+      color: $accent-secondary;
+    }
+  }
+
+  .executionTime {
+    font-size: $font-size-caption;
+    color: $text-muted;
+    min-width: 50px;
+    text-align: right;
+    line-height: $line-height-tight;
+  }
+}
+
+// Reports Section - Using Ant Design Flex
+.reportsList {
+  .reportItem {
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f4f6;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .reportInfo {
+
+    .reportTitle {
+      font-size: $font-size-body-small;
+      font-weight: $font-weight-semibold;
+      color: $text-primary;
+      margin: 0 0 3px 0;
+      line-height: $line-height-normal;
+    }
+
+    .reportDescription {
+      font-size: $font-size-small;
+      color: $text-secondary;
+      margin: 0 0 3px 0;
+      line-height: $line-height-normal;
+    }
+
+    .reportDate {
+      font-size: $font-size-caption;
+      color: $text-muted;
+      line-height: $line-height-tight;
+    }
+  }
+
+}
+
+// Responsive - Bootstrap handles most responsive behavior via grid classes
+// Custom responsive adjustments for project card
+@media (max-width: 1200px) {
+  .projectLastRun {
+    border-left: none;
+    padding-left: 0;
+    text-align: left;
+  }
+}

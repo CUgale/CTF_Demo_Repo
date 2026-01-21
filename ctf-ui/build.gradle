@@ -1,0 +1,17 @@
+plugins {
+  id 'base'
+}
+
+group "com.datametica.ctf-ui"
+version "1.0.0"
+
+task dummyPythonTask {
+  group = 'Dummy Tasks'
+  description = 'A task that always succeeds for Python.'
+  doLast {
+    println 'This Python task always succeeds!'
+  }
+}
+
+dependencies {
+}

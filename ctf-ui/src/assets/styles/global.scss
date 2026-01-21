@@ -1,0 +1,42 @@
+
+:root {
+  // Colors
+  --color-primary: #10b981;
+  --color-secondary: #06b6d4;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
+  --color-gray: #64748b;
+
+  // Typography - Font Sizes
+  --font-size-display: 32px;
+  --font-size-h1: 24px;
+  --font-size-h2: 20px;
+  --font-size-h3: 18px;
+  --font-size-h4: 16px;
+  --font-size-body-large: 15px;
+  --font-size-body: 14px;
+  --font-size-body-small: 13px;
+  --font-size-small: 12px;
+  --font-size-caption: 12px;
+
+  // Typography - Line Heights
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  // Typography - Font Weights
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

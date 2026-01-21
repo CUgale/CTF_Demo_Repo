@@ -1,0 +1,5 @@
+// Bootstrap is now loaded via prebuilt CSS in `src/index.tsx` to avoid Sass
+// deprecation warnings coming from Bootstrap's SCSS sources.
+//
+// Keep this file for future Bootstrap overrides if/when you decide to customize
+// Bootstrap via Sass module system.

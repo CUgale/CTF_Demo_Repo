@@ -1,0 +1,189 @@
+@use '../shared/variables' as *;
+@use 'sass:color';
+
+// Page Header
+.titleDescription {
+  font-size: $font-size-body-small;
+  color: $text-secondary;
+  margin: 0;
+}
+
+// Form Card
+.formCard {
+  background: $bg-primary;
+  border-radius: 8px;
+  border: 1px solid $border-color;
+  padding: 16px;
+}
+
+.labelIcon {
+  margin-right: 6px;
+  color: $text-secondary;
+}
+
+.inputHint {
+  display: block;
+  font-size: $font-size-caption;
+  color: $text-muted;
+  margin-top: 6px;
+  font-style: italic;
+  line-height: $line-height-tight;
+}
+
+// Commit Selection
+.hintBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  background: $bg-secondary;
+  border-radius: 6px;
+  margin-top: 12px;
+
+  .hintIcon {
+    color: $accent-secondary;
+    font-size: $font-size-body-small;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .hintText {
+    font-size: $font-size-small;
+    color: $text-secondary;
+    line-height: $line-height-normal;
+    flex: 1;
+
+    strong {
+      font-weight: $font-weight-semibold;
+      color: $text-primary;
+    }
+  }
+}
+
+.commitOption {
+  padding: 2px 0;
+
+  .commitSha {
+    font-size: $font-size-caption;
+    font-weight: $font-weight-semibold;
+    color: $accent-secondary;
+  }
+
+  .commitMessage {
+    font-size: $font-size-body-small;
+    color: $text-primary;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.customCommitOption {
+  border-top: 1px solid $border-color;
+  padding: 6px 10px;
+  margin-top: 2px;
+
+  button {
+    color: $accent-secondary;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-small;
+    padding: 0;
+    height: auto;
+    line-height: $line-height-normal;
+  }
+}
+
+// Commit Details
+.commitDetails {
+  background: $bg-primary;
+  border-radius: 8px;
+  border: 1px solid $border-color;
+  overflow: hidden;
+}
+
+.commitDetailsHeader {
+  padding: 10px 16px;
+  border-bottom: 1px solid $border-color;
+  background: $bg-secondary;
+}
+
+.commitDetailsTitle {
+  font-size: $font-size-small;
+  font-weight: $font-weight-semibold;
+  color: $text-secondary;
+  line-height: $line-height-normal;
+}
+
+.commitDetailsBody {
+  padding: 14px 16px;
+}
+
+.commitShaCode {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: $font-size-small;
+  font-weight: $font-weight-semibold;
+  color: $accent-color;
+  background: rgba(16, 185, 129, 0.08);
+  padding: 4px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  line-height: $line-height-tight;
+}
+
+.commitMessage {
+  font-size: $font-size-body;
+  font-weight: $font-weight-medium;
+  color: $text-primary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: $line-height-normal;
+}
+
+.commitMetaItem {
+  font-size: $font-size-small;
+  color: $text-secondary;
+  line-height: $line-height-normal;
+}
+
+.metaIcon {
+  font-size: $font-size-caption;
+  color: $text-muted;
+}
+
+.metaValue {
+  color: $text-secondary;
+}
+
+.metaEmail {
+  color: $text-muted;
+  font-size: $font-size-caption;
+  line-height: $line-height-tight;
+
+  &::before {
+    content: '·';
+    margin: 0 4px;
+    color: $text-muted;
+  }
+}
+
+.metaSeparator {
+  color: $text-muted;
+  font-size: $font-size-caption;
+}
+
+// Action Button
+.triggerButton {
+  background: $accent-color;
+  border: none;
+  color: #ffffff !important;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-normal;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+
+  &:hover:not(:disabled) {
+    background: color.adjust($accent-color, $lightness: -5%);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+  }
+}
