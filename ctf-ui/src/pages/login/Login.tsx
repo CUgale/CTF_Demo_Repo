@@ -36,7 +36,7 @@ const Login: React.FC = () => {
       <div className={styles.loginWrapper}>
         <div className={styles.loginCard}>
           <img
-            src="/resources/images/product_text_logo.png"
+            src={`${import.meta.env.BASE_URL}resources/images/product_text_logo.png`}
             alt="CTF Logo"
             style={{ width: '100%', height: '150px' }}
             className={styles.logoImage}
