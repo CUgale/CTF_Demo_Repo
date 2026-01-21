@@ -136,7 +136,7 @@ const Header: React.FC = () => {
         {/* Logo Section */}
         <div className="d-flex align-items-center gap-3 flex-shrink-0" style={{ minWidth: '200px' }}>
           <img
-            src="/resources/images/product_logo.png"
+            src={`${import.meta.env.BASE_URL}resources/images/product_logo.png`}
             alt="CTF Logo"
             className="object-fit-contain"
             style={{ width: '42px', height: '42px' }}
