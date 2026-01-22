@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
@@ -17,9 +17,9 @@ const App: React.FC = () => {
         <DashboardDesignProvider>
           <ProjectProvider>
             <ChatContextProvider>
-              <BrowserRouter>
+              <HashRouter>
                 <AppRoutes />
-              </BrowserRouter>
+              </HashRouter>
             </ChatContextProvider>
           </ProjectProvider>
         </DashboardDesignProvider>
